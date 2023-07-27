@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Hausreparatur"),
+        title: const Text("Hausreparatur"),
       ),
       body: Center(
         child: Column(
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
