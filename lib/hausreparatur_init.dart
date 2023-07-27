@@ -9,7 +9,7 @@ class HausReparatur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Hausreparatur',
       theme: ThemeData(
         brightness: Brightness.light,
       ),
@@ -27,7 +27,7 @@ class HausReparatur extends StatelessWidget {
         Locale('en'), // English
         Locale('de'), // Deutsch
       ],
-      home: const LoginPage(title: 'Flutter Demo Home Page'),
+      home: const LoginPage(),
     );
   }
 }
