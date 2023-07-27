@@ -22,7 +22,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        centerTitle: true,
+        title: Text("Hausreparatur"),
       ),
       body: Center(
         child: Column(
