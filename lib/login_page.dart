@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Halo un Wilcommen bei Hausreparatur',
               style: GoogleFonts.getFont("Montserrat"),
             ),
             Text(
