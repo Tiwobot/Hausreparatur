@@ -12,9 +12,11 @@ class HausReparatur extends StatelessWidget {
       title: 'Hausreparatur',
       theme: ThemeData(
         brightness: Brightness.light,
+        primaryColor: const Color(0xFFF9A720),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
+        primaryColor: const Color(0xFFF9A720),
       ),
       themeMode: ThemeMode.system,
       localizationsDelegates: const [

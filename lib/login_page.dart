@@ -22,7 +22,12 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Hausreparatur"),
+        title: const Text(
+          "Hausreparatur",
+          style: TextStyle(fontFamily: 'Helvetica'),
+        ),
+        backgroundColor: const Color(0xFFF9A720),
+        elevation: 0,
       ),
       body: Center(
         child: Column(
