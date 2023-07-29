@@ -9,22 +9,24 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          "Hausreparatur",
-          style: TextStyle(fontFamily: 'Helvetica'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset(
+              'assets/images/icon_v3_transparent.png',
+              height: 30,
+              width: 30,
+            ),
+            const Text(
+              "Hausreparatur",
+              style: TextStyle(fontFamily: 'Helvetica'),
+            ),
+          ],
         ),
         backgroundColor: const Color(0xFFF9A720),
         elevation: 0,
@@ -35,19 +37,10 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             Text(
               'Halo un Wilcommen bei Hausreparatur',
-              style: GoogleFonts.getFont("Montserrat"),
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: GoogleFonts.getFont("Ubuntu"),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
