@@ -107,7 +107,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: implement Login Button
+                },
                 child:
                     const Text('Login', style: TextStyle(fontFamily: 'Ubuntu')),
               ),
@@ -123,11 +125,16 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                Text(
-                  'Get Help',
-                  style: GoogleFonts.ubuntu(
-                    textStyle: const TextStyle(
-                      color: Color(0xFFFFFFFF),
+                InkWell(
+                  onTap: () {
+                    //TODO: implement Forget Password Button.
+                  },
+                  child: Text(
+                    'Get Help',
+                    style: GoogleFonts.ubuntu(
+                      textStyle: const TextStyle(
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                 ),
@@ -137,15 +144,20 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        height: 50,
+        height: 70,
         color: Colors.transparent,
         elevation: 0,
-        child: Text(
-          'Create an account',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.ubuntu(
-            textStyle: const TextStyle(
-              color: Color.fromARGB(255, 203, 203, 203),
+        child: InkWell(
+          onTap: () {
+            //TODO: implement Register Button.
+          },
+          child: Text(
+            'Create an account',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.ubuntu(
+              textStyle: const TextStyle(
+                color: Color.fromARGB(255, 203, 203, 203),
+              ),
             ),
           ),
         ),
