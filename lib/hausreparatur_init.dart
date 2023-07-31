@@ -17,9 +17,17 @@ class HausReparatur extends StatelessWidget {
       ),
       darkTheme: ThemeData(
           useMaterial3: true,
-        brightness: Brightness.dark,
-        primaryColor: const Color(0xFFF9A720),
-      ),
+          brightness: Brightness.dark,
+          primaryColor: const Color(0xFFF9A720),
+          scaffoldBackgroundColor: const Color(0xFF000000),
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Color(0xFFF9A720),
+              //iconTheme: IconThemeData(color: Colors.red),
+              //actionsIconTheme: IconThemeData(color: Colors.amber),
+              centerTitle: true,
+              elevation: 0,
+              titleTextStyle:
+                  TextStyle(fontFamily: 'Helvetica', fontSize: 20))),
       themeMode: ThemeMode.system,
       localizationsDelegates: const [
         AppLocalizations.delegate,
