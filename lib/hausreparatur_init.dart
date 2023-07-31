@@ -11,10 +11,12 @@ class HausReparatur extends StatelessWidget {
     return MaterialApp(
       title: 'Hausreparatur',
       theme: ThemeData(
+        useMaterial3: true,
         brightness: Brightness.light,
         primaryColor: const Color(0xFFF9A720),
       ),
       darkTheme: ThemeData(
+          useMaterial3: true,
         brightness: Brightness.dark,
         primaryColor: const Color(0xFFF9A720),
       ),
