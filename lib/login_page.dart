@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Forgot your password? ',
+                  'Forgot your password?',
                   style: GoogleFonts.ubuntu(
                     textStyle: const TextStyle(
                       color: Color.fromARGB(255, 145, 145, 145),
@@ -126,14 +126,18 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 InkWell(
+                  borderRadius: BorderRadius.circular(7),
                   onTap: () {
                     //TODO: implement Forget Password Button.
                   },
-                  child: Text(
-                    'Get Help',
-                    style: GoogleFonts.ubuntu(
-                      textStyle: const TextStyle(
-                        color: Color(0xFFFFFFFF),
+                  child: Container(
+                    margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    child: Text(
+                      'Get Help',
+                      style: GoogleFonts.ubuntu(
+                        textStyle: const TextStyle(
+                          color: Color(0xFFFFFFFF),
+                        ),
                       ),
                     ),
                   ),
@@ -148,15 +152,19 @@ class _LoginPageState extends State<LoginPage> {
         color: Colors.transparent,
         elevation: 0,
         child: InkWell(
+          borderRadius: BorderRadius.circular(20),
           onTap: () {
             //TODO: implement Register Button.
           },
-          child: Text(
-            'Create an account',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.ubuntu(
-              textStyle: const TextStyle(
-                color: Color.fromARGB(255, 203, 203, 203),
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+            child: Text(
+              'Create an account',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.ubuntu(
+                textStyle: const TextStyle(
+                  color: Color.fromARGB(255, 203, 203, 203),
+                ),
               ),
             ),
           ),
