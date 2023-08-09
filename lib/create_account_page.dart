@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hausreparatur/create_account_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class CreateAccountMail extends StatefulWidget {
+  const CreateAccountMail({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<CreateAccountMail> createState() => _CreateAccountMailState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _CreateAccountMailState extends State<CreateAccountMail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 4),
-              margin: const EdgeInsets.fromLTRB(25, 5, 25, 10),
+              margin: const EdgeInsets.fromLTRB(25, 0, 25, 10),
               height: 50,
               width: 370,
               decoration: BoxDecoration(
@@ -77,12 +76,11 @@ class _LoginPageState extends State<LoginPage> {
                   border: Border.all(),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
-                obscureText: true,
                 style: GoogleFonts.getFont("Ubuntu"),
-                autocorrect: false,
+                obscureText: false,
                 decoration: InputDecoration(
                   floatingLabelBehavior: FloatingLabelBehavior.always,
-                  hintText: "Password",
+                  hintText: "Email address or phone number",
                   hintStyle: GoogleFonts.getFont("Ubuntu"),
                   border: InputBorder.none,
                 ),
