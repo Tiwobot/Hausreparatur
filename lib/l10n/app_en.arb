@@ -1,0 +1,9 @@
+{
+  "helloWorld": "Hello World!",
+  "email_address_or_phone_number": "Email address or phone number",
+  "password": "Password",
+  "login": "Login",
+  "forgot_your_password": "Forgot your password?",
+  "get_Help": "Get Help",
+  "create_an_account": "Create an account"
+}
