@@ -10,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool _obscureText = true;
+  bool _obscureColor = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 4),
+              padding: const EdgeInsets.fromLTRB(15, 3, 15, 3),
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 10),
               height: 50,
               width: 370,
@@ -68,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 4),
+              padding: const EdgeInsets.fromLTRB(15, 3, 3, 3),
               margin: const EdgeInsets.fromLTRB(25, 5, 25, 10),
               height: 50,
               width: 370,
@@ -76,8 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                   color: const Color.fromARGB(255, 52, 52, 52),
                   border: Border.all(),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
-              child: TextField(
-                obscureText: true,
+              child: TextFormField(
+                obscureText: _obscureText,
                 style: GoogleFonts.getFont("Ubuntu"),
                 autocorrect: false,
                 decoration: InputDecoration(
@@ -85,6 +87,18 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: "Password",
                   hintStyle: GoogleFonts.getFont("Ubuntu"),
                   border: InputBorder.none,
+                  suffixIcon: IconButton(
+                    color: Color(_obscureColor ? (0xFFa1a1a1) : (0xFF9e8deb)),
+                    icon: Icon(_obscureText
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_rounded),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                        _obscureColor = !_obscureColor;
+                      });
+                    },
+                  ),
                 ),
               ),
             ),
