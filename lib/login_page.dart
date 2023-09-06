@@ -12,22 +12,28 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool _obscureText = true;
   bool _obscureColor = true;
+  String iconAssetLocation = "";
   @override
   Widget build(BuildContext context) {
+    if (Theme.of(context).brightness == Brightness.light) {
+      iconAssetLocation = 'assets/images/icon_v3_transparent_dark.png';
+    } else {
+      iconAssetLocation = 'assets/images/icon_v3_transparent.png';
+    }
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              'assets/images/icon_v3_transparent.png',
+              iconAssetLocation,
               filterQuality: FilterQuality.medium,
               height: 50,
               width: 50,
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 35),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
@@ -35,10 +41,10 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontFamily: 'Helvetica',
                       fontSize: 30,
-                      color: Color(0xFFFFFFFF),
+                      color: Theme.of(context).primaryColorLight,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "reparatur",
                     style: TextStyle(
                       fontFamily: 'Helvetica',
@@ -55,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 50,
               width: 370,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 52, 52, 52),
+                  color: Theme.of(context).primaryColorDark,
                   border: Border.all(),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
@@ -75,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 50,
               width: 370,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 52, 52, 52),
+                  color: Theme.of(context).primaryColorDark,
                   border: Border.all(),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextFormField(
@@ -88,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                   hintStyle: GoogleFonts.getFont("Ubuntu"),
                   border: InputBorder.none,
                   suffixIcon: IconButton(
-                    color: Color(_obscureColor ? (0xFFa1a1a1) : (0xFF9e8deb)),
+                    color: Color(_obscureColor ? (0xFFa1a1a1) : (0xFFF9A720)),
                     icon: Icon(_obscureText
                         ? Icons.visibility_outlined
                         : Icons.visibility_off_rounded),
@@ -107,21 +113,6 @@ class _LoginPageState extends State<LoginPage> {
               height: 50,
               width: 370,
               child: ElevatedButton(
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.all(
-                    const Color.fromARGB(255, 145, 96, 18),
-                  ),
-                  backgroundColor: MaterialStateProperty.all(
-                    const Color.fromARGB(255, 217, 144, 27),
-                  ),
-                  foregroundColor:
-                      MaterialStateProperty.all(const Color(0xFFFFFFFF)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                ),
                 onPressed: () {
                   //TODO: implement Login Button
                 },
@@ -150,8 +141,8 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(
                       'Get Help',
                       style: GoogleFonts.ubuntu(
-                        textStyle: const TextStyle(
-                          color: Color(0xFFFFFFFF),
+                        textStyle: TextStyle(
+                          color: Theme.of(context).primaryColorLight,
                         ),
                       ),
                     ),
@@ -163,11 +154,12 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        height: 70,
+        height: 80,
         color: Colors.transparent,
         elevation: 0,
         child: InkWell(
-          borderRadius: BorderRadius.circular(20),
+          highlightColor: const Color.fromARGB(0, 0, 0, 0),
+          splashColor: const Color.fromARGB(0, 0, 0, 0),
           onTap: () {
             Navigator.push(
               context,
@@ -175,17 +167,23 @@ class _LoginPageState extends State<LoginPage> {
                   builder: (context) => const CreateAccountPage()),
             );
           },
-          child: Container(
-            margin: const EdgeInsets.fromLTRB(0, 12, 0, 0),
-            child: Text(
-              'Create an account',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.ubuntu(
-                textStyle: const TextStyle(
-                  color: Color.fromARGB(255, 203, 203, 203),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Divider(color: Color.fromARGB(255, 116, 116, 116)),
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 3, 0, 0),
+                child: Text(
+                  'Create an account',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.ubuntu(
+                    textStyle: TextStyle(
+                      color: Theme.of(context).primaryColorLight,
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
       ),
