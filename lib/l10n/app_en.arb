@@ -5,5 +5,7 @@
   "login": "Login",
   "forgot_your_password": "Forgot your password?",
   "get_Help": "Get Help",
-  "create_an_account": "Create an account"
+  "create_an_account": "Create an account",
+  "create_account":"Create Account",
+  "email_adress":"Email Adress"
 }
