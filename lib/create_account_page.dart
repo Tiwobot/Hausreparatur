@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'create_account_password.dart';
 
 class CreateAccountPage extends StatefulWidget {
@@ -38,7 +37,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
             Container(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 4),
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 10),
-              height: 70,
+              height: 50,
               width: 370,
               decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 52, 52, 52),
