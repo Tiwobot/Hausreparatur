@@ -18,15 +18,26 @@ class _CreateAccountPasswordState extends State<CreateAccountPassword> {
           children: <Widget>[
             Container(
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Set a Password",
+                    "Create a Password",
                     style: GoogleFonts.ubuntu(
                       fontSize: 25,
-                      textStyle: const TextStyle(
-                        color: Color.fromARGB(255, 203, 203, 203),
+                      textStyle: TextStyle(
+                        color: Theme.of(context).primaryColorLight,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(5, 10, 5, 15),
+                    child: Text(
+                      'Your password should be at least 6 characters long and should contain at least 1 character and 1 number',
+                      style: GoogleFonts.ubuntu(
+                        textStyle: const TextStyle(
+                          color: Color.fromARGB(255, 145, 145, 145),
+                        ),
                       ),
                     ),
                   ),
@@ -39,7 +50,7 @@ class _CreateAccountPasswordState extends State<CreateAccountPassword> {
               height: 50,
               width: 370,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 52, 52, 52),
+                color: Theme.of(context).primaryColorDark,
                 border: Border.all(),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
               ),
@@ -55,10 +66,9 @@ class _CreateAccountPasswordState extends State<CreateAccountPassword> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-              margin: const EdgeInsets.fromLTRB(25, 5, 25, 20),
-              height: 60,
-              width: 100,
+              margin: const EdgeInsets.fromLTRB(25, 5, 25, 10),
+              height: 50,
+              width: 370,
               child: ElevatedButton(
                 style: ButtonStyle(
                   overlayColor: MaterialStateProperty.all(
@@ -78,10 +88,8 @@ class _CreateAccountPasswordState extends State<CreateAccountPassword> {
                 onPressed: () {
                   // TODO: Implement create account logic
                 },
-                child: const Icon(
-                  Icons.navigate_next_rounded,
-                  size: 35.0,
-                ),
+                child:
+                    const Text('Next', style: TextStyle(fontFamily: 'Ubuntu')),
               ),
             ),
           ],

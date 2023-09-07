@@ -19,15 +19,26 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
           children: <Widget>[
             Container(
               margin: const EdgeInsets.fromLTRB(25, 0, 25, 20),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Create Account",
+                    "Create an account",
                     style: GoogleFonts.ubuntu(
                       fontSize: 25,
-                      textStyle: const TextStyle(
-                        color: Color.fromARGB(255, 203, 203, 203),
+                      textStyle: TextStyle(
+                        color: Theme.of(context).primaryColorLight,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0, 10, 0, 15),
+                    child: Text(
+                      'Enter your email adress to create an account.',
+                      style: GoogleFonts.ubuntu(
+                        textStyle: const TextStyle(
+                          color: Color.fromARGB(255, 145, 145, 145),
+                        ),
                       ),
                     ),
                   ),
@@ -40,12 +51,13 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
               height: 50,
               width: 370,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 52, 52, 52),
+                  color: Theme.of(context).primaryColorDark,
                   border: Border.all(),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextFormField(
+                expands: false,
                 style: GoogleFonts.getFont("Ubuntu"),
-                autovalidateMode: AutovalidateMode.always,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 validator: validateEmail,
                 obscureText: false,
                 decoration: InputDecoration(
@@ -57,10 +69,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-              margin: const EdgeInsets.fromLTRB(25, 5, 25, 20),
-              height: 60,
-              width: 100,
+              margin: const EdgeInsets.fromLTRB(25, 5, 25, 10),
+              height: 50,
+              width: 370,
               child: ElevatedButton(
                 style: ButtonStyle(
                   overlayColor: MaterialStateProperty.all(
@@ -84,10 +95,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         builder: (context) => const CreateAccountPassword()),
                   );
                 },
-                child: const Icon(
-                  Icons.navigate_next_rounded,
-                  size: 35.0,
-                ),
+                child:
+                    const Text('Next', style: TextStyle(fontFamily: 'Ubuntu')),
               ),
             ),
           ],
