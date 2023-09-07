@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hausreparatur/create_account_page.dart';
+import 'package:hausreparatur/forgot_pass_email.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -134,7 +135,11 @@ class _LoginPageState extends State<LoginPage> {
                 InkWell(
                   borderRadius: BorderRadius.circular(7),
                   onTap: () {
-                    //TODO: implement Forget Password Button.
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ForgotPasswordEmail()),
+                    );
                   },
                   child: Container(
                     margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
