@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hausreparatur/create_account_page.dart';
 import 'package:hausreparatur/forgot_pass_email.dart';
+import 'options_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -115,7 +116,10 @@ class _LoginPageState extends State<LoginPage> {
               width: 370,
               child: ElevatedButton(
                 onPressed: () {
-                  //TODO: implement Login Button
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
                 },
                 child:
                     const Text('Login', style: TextStyle(fontFamily: 'Ubuntu')),
