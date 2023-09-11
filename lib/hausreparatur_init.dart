@@ -15,7 +15,7 @@ class HausReparatur extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: const Color(0xFFF9A720),
         primaryColorLight: const Color.fromARGB(255, 0, 0, 0),
-        primaryColorDark: Color.fromARGB(255, 255, 255, 255),
+        primaryColorDark: const Color.fromARGB(255, 255, 255, 255),
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
         appBarTheme: const AppBarTheme(
             backgroundColor: Color(0xFFF9A720),

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('House Repairs App'),
+        title: const Text('House Repairs App'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -42,7 +44,7 @@ class RepairOption extends StatelessWidget {
   final String title;
   final IconData icon;
 
-  const RepairOption({required this.title, required this.icon});
+  const RepairOption({super.key, required this.title, required this.icon});
 
   @override
   Widget build(BuildContext context) {
