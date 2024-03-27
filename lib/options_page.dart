@@ -81,17 +81,17 @@ class RepairOption extends StatelessWidget {
         ),
       ),
       child: ListTile(
-        focusColor: Color.fromARGB(255, 88, 88, 88),
-        selectedColor: Color.fromARGB(255, 78, 78, 78),
-        splashColor: Color.fromARGB(255, 78, 78, 78),
+        focusColor: const Color.fromARGB(255, 88, 88, 88),
+        selectedColor: const Color.fromARGB(255, 78, 78, 78),
+        splashColor: const Color.fromARGB(255, 78, 78, 78),
         title: Row(
           children: [
             const Spacer(),
             Text(
               title,
               style: GoogleFonts.ubuntu(
-                backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                color: Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
