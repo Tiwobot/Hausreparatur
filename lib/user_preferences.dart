@@ -1,8 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserPreferences {
-  late bool _isFirst;
-  late bool _isLoggedin;
+  late bool _isFirst = true;
+  late bool _isLoggedin = false;
 
   initState() {
     readIsFirst();

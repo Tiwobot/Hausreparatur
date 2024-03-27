@@ -34,6 +34,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  google_fonts: 5.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -57,10 +58,23 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   generate: true
+  assets:
+    - assets/images/icon_v3_transparent.png
+    - assets/images/icon_v3_transparent_dark.png
+    - assets/images/category_photo/electric.jpg
+    - assets/images/category_photo/heating.jpg
+    - assets/images/category_photo/other.jpg
+    - assets/images/category_photo/painter.jpg
+    - assets/images/category_photo/plumbing.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/helvetica_bold.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
